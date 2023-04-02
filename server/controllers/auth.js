@@ -1,6 +1,6 @@
 const bcrypt =require ("bcrypt");
 const jwt =require("jsonwebtoken") ;
-const User =require("../models/User.js") ;
+const User =require("../models/User") ;
 
 /*register User */
 const register = async (req, res) => {
@@ -32,7 +32,7 @@ const register = async (req, res) => {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(400).json({ error: error.message });
   }
 };
 

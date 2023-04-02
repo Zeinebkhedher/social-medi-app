@@ -1,5 +1,5 @@
-const Post =require("../models/Post.js") ;
-const User =require("../models/User.js") ;
+const Post =require("../models/Post") ;
+const User =require("../models/User") ;
 
 /* CREATE */
 const createPost = async (req, res) => {

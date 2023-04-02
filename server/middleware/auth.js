@@ -12,7 +12,7 @@ const verifyToken = async (req, res, next) => {
     req.user = verified;
     next();
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
 module.exports=verifyToken
